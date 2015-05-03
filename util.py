@@ -3,7 +3,7 @@
 import os
 import re
 
-_add_dot_txt_flag = False
+_add_dot_txt_flag = True
 
 
 def image_to_scratch(im, scratch_image_name):
@@ -109,7 +109,8 @@ class OCR_result(str):
 	
 def retrieve_result(scratch_text_name_root):
 	text = retrieve_text(scratch_text_name_root)
-	return OCR_result(text)
+        return text
+        #return OCR_result(text)
 
 def perform_cleanup(scratch_image_name, scratch_text_name_root):
 	"""Clean up temporary files from disk"""
